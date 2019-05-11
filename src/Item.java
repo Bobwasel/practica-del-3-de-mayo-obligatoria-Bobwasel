@@ -1,5 +1,6 @@
+import java.io.Serializable;
 
-public class Item {
+public class Item implements Serializable{
 	private String nombre;
 	private String dato;
 	
@@ -51,5 +52,10 @@ public class Item {
 	@Override
 	public String toString() {
 		return "Item [nombre=" + nombre + ", dato=" + dato + "]";
+	}
+	
+	public static void main (String[] args) {
+		Item item = new Item("Comida Favorita: ", "Shushi");
+		System.out.println(item.toString());
 	}
 }

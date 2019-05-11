@@ -1,10 +1,11 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public class Agenda {
+public class Agenda implements Serializable {
 	private String nombre;
 	private Map<Contacto,List<Item>> listaContacto;
 	
@@ -109,4 +110,15 @@ public class Agenda {
 		return listaContacto.get(c);
 	}
 	
+	public static void main (String[] args) {
+		HashMap<Contacto, List<Item>> agenda = new HashMap<>();
+		Contacto c1 = new Contacto("Antonio");
+		Agenda a1 = new Agenda("Agenda", agenda);
+		
+		a1.anyadeContacto(c1);
+		a1.anyadeItem(c1, new Item("Dirreción: ", "C/Falsa 123"));
+		
+		System.out.println(a1.listaCompleta());
+	}
+
 }

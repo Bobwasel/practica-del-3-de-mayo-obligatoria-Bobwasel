@@ -1,5 +1,6 @@
+import java.io.Serializable;
 
-public class Contacto {
+public class Contacto implements Serializable{
 	private String nombre;
 	
 	public Contacto(String nombre) {
@@ -42,4 +43,5 @@ public class Contacto {
 		String nombre = c1.getNombre();
 		System.out.println(nombre);
 	}
+	
 }
