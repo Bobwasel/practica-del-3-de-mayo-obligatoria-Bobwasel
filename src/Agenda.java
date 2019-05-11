@@ -90,7 +90,7 @@ public class Agenda {
 			cadena += c + "\n";
 			for(Item i : guarda) {
 				cadena += i + "\n";
-				cadena += "-----------";
+				cadena += "-----------\n";
 			}
 		}
 		return cadena;
@@ -109,28 +109,4 @@ public class Agenda {
 		return listaContacto.get(c);
 	}
 	
-	public List<Contacto> listaInfo(String i){
-		// No sé que poner.
-		return null;
-	}
-	
-	
-	public static void main(String[] args) {
-		HashMap<Contacto, List<Item>> agenda = new HashMap<>();
-		
-		Contacto c1 = new Contacto("Pepe");
-		ArrayList<Item> informacionPepe = new ArrayList<>();
-		informacionPepe.add(new Item("Telefono", "987 654 123"));
-		informacionPepe.add(new Item("Dirección", "Nasa 123"));
-		
-		agenda.put(c1, informacionPepe);
-		
-		Contacto c2 = new Contacto("Jose");
-		ArrayList<Item> informacionJose = new ArrayList<>();
-		informacionJose.add(new Item("Telefono", "987 654 123"));
-		informacionJose.add(new Item("Dirección", "Nasa 123"));
-		
-		agenda.put(c2, informacionJose);
-		
-	}
 }
